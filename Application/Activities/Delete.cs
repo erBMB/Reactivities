@@ -1,5 +1,4 @@
 using MediatR;
-using Domain;
 using Persistence;
 
 namespace Application.Activities

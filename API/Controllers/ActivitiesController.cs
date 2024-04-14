@@ -20,6 +20,22 @@ namespace API.Controllers
     }
 
 
+
+     [HttpGet("GetCityActivities")]
+     public async Task<ActionResult<List<Activity>>> GetCityActivities() 
+     {
+            return await Mediator.Send(new EditedList.Query()); 
+
+     }
+
+      [HttpGet("GetDateActivities")]
+     public async Task<ActionResult<List<Activity>>> GetDateActivities() 
+     {
+            return await Mediator.Send(new EditedDateList.Query()); 
+
+     }
+
+
     [HttpPost]
     public async Task<IActionResult> CreateActivity(Activity activity) 
     {
