@@ -65,8 +65,10 @@ namespace API.Controllers
         // Get the current date and time
         DateTime currentDateTime = DateTime.Now;
 
+         string formattedDateTime = currentDateTime.ToString("yyyy_MM_dd@HH_mm_ss");
+
         // Return the current date and time as a JSON response
-        return Ok(new { DateTime = currentDateTime });
+        return Ok(new { DateTime = formattedDateTime });
     }
 
     }
