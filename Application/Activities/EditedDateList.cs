@@ -18,8 +18,11 @@ namespace Application.Activities
             public async Task<List<Activity>> Handle(Query request, CancellationToken cancellationToken)
             {
                 // Define the date range (April 14, 2024)
-            DateTime startDate = new DateTime(2024, 4, 14);
-            DateTime endDate = startDate.AddDays(1); // The next day
+            //DateTime startDate = new DateTime(2024, 4, 14);
+           // DateTime endDate = startDate.AddDays(1); // The next day
+            DateTime startDate=new DateTime(2024, 4, 8);
+            DateTime endDate = new DateTime(2024, 8, 14);
+
 
             // Retrieve activities from the context that fall within the specified date range
             var activities = await _context.Activities

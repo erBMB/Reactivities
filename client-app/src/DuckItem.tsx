@@ -1,3 +1,4 @@
+import { List } from "semantic-ui-react"
 import { Duck, ducks } from "./demo"
 
 interface Pumi{
@@ -7,11 +8,11 @@ interface Pumi{
 
 export default function DuckItem({duck}:Pumi) {
   return (
-    <ul key={duck.name}>
-        <li>
+    <List key={duck.name}>
+        <List.Item key={duck.name}>
             <span>Nume   {duck.name}    +   {ducks.indexOf(duck)}</span>
             <button onClick={()=>duck.makeSound(duck.name+' quack')}>Make sound</button>
-        </li>
-    </ul>
+        </List.Item>
+    </List>
   )
 }
